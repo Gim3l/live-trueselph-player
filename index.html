@@ -10,13 +10,9 @@
     <button onclick="openMessenger()">Open Player</button>
     <button onclick="closeMessenger()">Close Player</button>
     <button onclick="sayHello()">Say Hello</button>
-    <div id="trueselph-messenger-widget"></div>
-    <script
-      id="trueselph-player"
-      type="module"
-      src="https://truselph-player.vercel.app/webble.cjs.js"
-      selph-handle="rCfaqqd-bLnieUIw-pov5"
-    ></script>
+   <script>
+(function (selphHandle) { const d = document; const ctn = d.createElement("div"); const s = d.createElement("script"); ctn.setAttribute("id", "trueselph-messenger-widget"); s.setAttribute("type", "module");s.setAttribute("id", "trueselph-player"); s.setAttribute("src", "http://localhost:5000/tselph.umd.js"); s.setAttribute("selphHandle", selphHandle); s.async = true; s.onload = () => $selphLoader.load(ctn); d.body.append(ctn); d.body.append(s); })("rCfaqqd-bLnieUIw-pov5");
+</script>
     <script>
       function openMessenger() {
         $trueSelph.openMessenger();
